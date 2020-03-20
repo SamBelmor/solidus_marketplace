@@ -4,7 +4,7 @@ module SolidusMarketplace
 
     included do
       prepend(InstanceMethods)
-      belongs_to :supplier, class_name: 'Spree::Supplier'
+      belongs_to :supplier, class_name: 'Spree::Supplier', optional: true
       has_many :variants, through: :supplier
     end
 
